@@ -18,3 +18,13 @@ spring:
           username: Xpiper
           password: lipengda456
       label: master
+  rabbitmq:
+    host: 192.168.23.128
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
