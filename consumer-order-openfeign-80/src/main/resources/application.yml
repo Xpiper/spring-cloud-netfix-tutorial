@@ -1,0 +1,27 @@
+server:
+  port: 80
+
+
+spring:
+  application:
+    name: consumer-order-openfeign-80
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+
+
+ribbon:
+  # 连接超时时间
+  ConnectTimeout: 4000
+  # 读取超时时间
+  ReadTimeout: 4000
+
+#  feign 日志路径
+logging:
+  level:
+    io.lpd.orderfeign.service.FeignPaymentService: debug

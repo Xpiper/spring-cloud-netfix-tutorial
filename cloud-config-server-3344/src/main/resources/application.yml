@@ -1,0 +1,20 @@
+server:
+  port: 3344
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+spring:
+  application:
+    name: cloud-config-server-3344
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Xpiper/config-repo.git
+          search-paths:
+            - config-repo
+          username: Xpiper
+          password: lipengda456
+      label: master
